@@ -1,0 +1,7 @@
+jhatpat/
+config.json
+*_cut.mp4
+*_captioned.mp4
+.jhatpat_*
+__pycache__/
+.DS_Store

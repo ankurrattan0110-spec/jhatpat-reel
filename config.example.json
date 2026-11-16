@@ -1,0 +1,30 @@
+{
+  "_comment": "Copy to config.json, badlo, phir: rough_cut.py take.mp4 --config config.json",
+
+  "silence_db": -38,
+  "_silence_db": "Isse dheemi awaaz = silence. Shor wale kamre me -34, shaant kamre me -42.",
+
+  "silence_min": 0.22,
+  "_silence_min": "Itni der chup raho tabhi silence maana jayega (seconds).",
+
+  "pre_pad": 0.10,
+  "_pre_pad": "Har bole hue tukde se itna pehle se cut shuru. Kam karoge to pehla akshar katega.",
+
+  "post_pad": 0.14,
+  "_post_pad": "Tukde ke baad itna rakho. Hinglish me aakhri shabd thoda lamba khinchta hai.",
+
+  "max_pause": 0.42,
+  "_max_pause": "Isse lamba pause chhota kar diya jayega.",
+
+  "pause_keep": 0.22,
+  "_pause_keep": "Lambe pause ki jagah itna rakho. 0.2 se neeche mat jao - robot lagega.",
+
+  "scene_lead_in": 0.35,
+  "_scene_lead_in": "Video ke bilkul shuru me itni extra jagah.",
+
+  "scene_tail": 0.45,
+  "_scene_tail": "Video ke ant me itni extra jagah, taaki CTA ruke.",
+
+  "min_piece": 0.45,
+  "_min_piece": "Isse chhota tukda bolna nahi, saans ya khat-pat hai - hata do."
+}
