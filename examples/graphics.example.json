@@ -1,0 +1,46 @@
+{
+  "_how": "Har beat = ek graphic. 'start'/'end' seconds me, tumhari CUT video ke hisaab se (preview_timer.py se time dekho). Jo beat nahi chahiye, hata do. Ye file ek 65-second ki asli reel se li gayi hai.",
+
+  "colors": { "bg": "#0D1117", "cyan": "#00F5D4", "orange": "#FF6B00", "text": "#F0F6FC", "muted": "#8B949E", "red": "#FF4D4D" },
+  "fonts":  { "black": "auto", "bold": "auto", "mono": "auto", "mono_regular": "auto" },
+  "camera": { "anchor": [540, 860], "punch_zoom": 1.06, "punch_time": 0.35, "settle_zoom": 1.025 },
+  "mask":   { "enabled": true, "wall_top": 0.26, "side": 0.07, "threshold": 11.0 },
+  "ambient": { "from": 4.5, "grid": true, "particles": true, "pops": true },
+  "sfx_gain_db": -15,
+  "loudness_lufs": -14,
+
+  "beats": [
+    { "type": "push_in",       "start": 0.0,  "end": 4.5,  "zoom": [1.0, 1.12] },
+
+    { "type": "timeline_fast", "start": 4.6,  "end": 8.0,  "label": "TIMELINE · manual edit", "speed": "2.5x" },
+    { "type": "kinetic_list",  "start": 7.8,  "end": 13.5, "punch": false,
+      "items": [[7.8, "CUT KARO"], [8.9, "SILENCE HATAO"], [10.1, "CAPTION TYPE KARO"], [11.6, "9:16 BANAO"]] },
+    { "type": "clock",         "start": 13.2, "end": 17.4, "label": "2 GHANTE", "minutes": 120 },
+    { "type": "flat_graph",    "start": 16.9, "end": 20.1, "title": "VIEWS", "value": "+0%", "label": "WAHI KE WAHI" },
+
+    { "type": "countdown",     "start": 20.2, "end": 24.8, "text": "10 SEC", "from": 10 },
+
+    { "type": "terminal",      "start": 24.9, "end": 32.5,
+      "title": "PowerShell — D:\\jhatpat-reel-main", "badge": "jhatpat-reel", "prompt": "PS>",
+      "command": "python scripts\\rough_cut.py take.mp4 --preset tight",
+      "output": ["raw   : 221.15s   1080x1920 @ 30.0fps",
+                 "cut   : 68.30s   (152.85s nikala, 69% chhota)",
+                 "pieces: 32   silences mile: 36",
+                 "bana  : jhatpat\\take_cut.mp4"],
+      "highlight_line": 1 },
+
+    { "type": "before_after",  "start": 32.6, "end": 40.9, "before": 54, "after": 38, "percent": 29 },
+
+    { "type": "devices",       "start": 41.1, "end": 47.5, "badge": "1 COMMAND" },
+
+    { "type": "word_captions", "start": 47.6, "end": 50.9, "words": "CAPTIONS BHI KHUD CHIPKA DETI HAI" },
+    { "type": "file_import",   "start": 50.6, "end": 53.6, "punch": false,
+      "title": "Premiere Pro  ·  Project", "ext": ".EDL", "done_label": "IMPORTED" },
+
+    { "type": "this_timeline", "start": 53.7, "end": 57.4, "title": "take_cut.mp4  ·  timeline", "label": "THIS REEL" },
+
+    { "type": "repo_card",     "start": 57.5, "end": 60.7,
+      "host": "GitHub", "repo": "ankurrattan0110-spec / jhatpat-reel", "badges": ["FREE", "OPEN SOURCE", "MIT"] },
+    { "type": "big_word",      "start": 60.4, "end": 64.75, "top": "COMMENT KARO", "word": "REEL" }
+  ]
+}
